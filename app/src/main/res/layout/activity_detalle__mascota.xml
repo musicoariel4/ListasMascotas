@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Detalle_Mascota">
+
+    <include android:id="@+id/miActionBar"
+        layout="@layout/actionbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <ImageView
+            android:id="@+id/imgFoto"
+            android:layout_width="match_parent"
+            android:layout_height="215dp"
+           android:src="@drawable/beagle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnlike"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:src="@drawable/huesoblanco" />
+
+            <TextView
+                android:id="@+id/tvNombreCV"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:text="@string/nombre"
+                android:textSize="@dimen/nombre_cadrview"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvContador"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="  5   "
+                android:textSize="@dimen/telefono_contacto" />
+
+            <ImageButton
+                android:id="@+id/btnlike2"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:src="@drawable/huesocolor" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
