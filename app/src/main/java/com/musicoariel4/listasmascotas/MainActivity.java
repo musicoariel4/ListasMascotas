@@ -12,6 +12,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar miActionBar =(Toolbar) findViewById(R.id.miActionBar);
         setSupportActionBar(miActionBar);
 
+        FloatingActionButton fab = findViewById(R.id.fab);
 
         listaMascotas=(RecyclerView) findViewById(R.id.rvMascotas);
         LinearLayoutManager llm = new LinearLayoutManager(this);
