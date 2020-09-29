@@ -5,14 +5,11 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.ActionBar;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Toast;
 
-import android.os.Bundle;
+import com.musicoariel4.listasmascotas.adapatador.ContactoAdapater;
+import com.musicoariel4.listasmascotas.pojo.Mascota;
 
 import java.util.ArrayList;
 
@@ -35,11 +32,12 @@ public class SecondActivity extends AppCompatActivity {
 
 
         listaMascotas=(RecyclerView) findViewById(R.id.rvMascotas);
-        LinearLayoutManager llm = new LinearLayoutManager(this);
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
+
+        LinearLayoutManager llm2 = new LinearLayoutManager(this);
+        llm2.setOrientation(LinearLayoutManager.VERTICAL);
         //  GridLayoutManager llm = new GridLayoutManager(this,2);
 
-        listaMascotas.setLayoutManager(llm);
+        listaMascotas.setLayoutManager(llm2);
         inicializarlistaMascotas();
         inicilizarAdaptador();
 

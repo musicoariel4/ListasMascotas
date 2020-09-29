@@ -1,4 +1,4 @@
-package com.musicoariel4.listasmascotas;
+package com.musicoariel4.listasmascotas.pojo;
 
 public class Mascota {
 

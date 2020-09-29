@@ -5,10 +5,18 @@
     <string name="telefono">Telefono de persona</string>
     <string name="Email">Email de persona</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Acerca De</string>
     <string name="action_order_message">You selected Order.</string>
     <string name="action_status_message">You selected Status.</string>
     <string name="action_favorites_message">You selected Favorites.</string>
-    <string name="action_contact_message">You selected Contact.</string>
+    <string name="action_contact">Contacto</string>
+
+    <string name="labelNombre">Nombre Completo</string>
+    <string name="labelTelefono">Telefono</string>
+    <string name="labelEmail">Email</string>
+    <string name="labelDesc">Descripcion Contacto</string>
+    <string name="labelfecha">Fecha  Nacimiento</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

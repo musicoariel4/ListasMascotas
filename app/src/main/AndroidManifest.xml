@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
     package="com.musicoariel4.listasmascotas">
+
+    <dist:module dist:instant="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,13 +15,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".SecondActivity"
-            android:label = "Second Activity"
-            android:parentActivityName="com.musicoariel4.listasmascotas.MainActivity">
+        <activity android:name=".Biografia"
+            android:label="Biografia"
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value= "com.musicoariel4.listasmascotas.MainActivity" />
+                android:value="com.musicoariel4.listasmascotas.MainActivity" />
+
+            </activity>
+        <activity android:name=".Formulario"
+            android:label="Formulario"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musicoariel4.listasmascotas.MainActivity" />
+
+        </activity>
+        <activity
+            android:name=".SecondActivity"
+            android:label="Second Activity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musicoariel4.listasmascotas.MainActivity" />
         </activity>
         <activity
             android:name=".Detalle_Mascota"

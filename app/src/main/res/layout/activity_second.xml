@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".SecondActivity">
 
     <include android:id="@+id/miActionBarSecond"
         layout="@layout/actionbarsecond"
         ></include>
 
-
     <androidx.recyclerview.widget.RecyclerView
 
         android:id="@+id/rvMascotas"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/miActionBarSecond"
         android:layout_marginTop="35dp"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.musicoariel4.listasmascotas;
+package com.musicoariel4.listasmascotas.adapatador;
 
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -12,6 +12,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.musicoariel4.listasmascotas.Detalle_Mascota;
+import com.musicoariel4.listasmascotas.pojo.Mascota;
+import com.musicoariel4.listasmascotas.R;
 
 import java.util.ArrayList;
 public class ContactoAdapater extends RecyclerView.Adapter<ContactoAdapater.ContactoViewHolder> {
@@ -61,7 +65,7 @@ public class ContactoAdapater extends RecyclerView.Adapter<ContactoAdapater.Cont
             @Override
             public void onClick(View view) {
                 Toast.makeText(activity,contacto.getNombre(),Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(activity,Detalle_Mascota.class);
+                Intent intent = new Intent(activity, Detalle_Mascota.class);
                 intent.putExtra("FotoContacto",contacto.getFoto());
                 intent.putExtra("nombreContacto",contacto.getNombre());
                 intent.putExtra("contadorContacto",contacto.getContador());

@@ -5,17 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Detalle_Mascota">
-
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarariel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
 
     <include android:id="@+id/miActionBar"
         layout="@layout/actionbar"></include>
 
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/miActionBar"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvMascotas"
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/miActionBar"/>
+        android:layout_height="555dp"
+        android:layout_below="@+id/appbarariel"
+        android:layout_marginTop="-1dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
