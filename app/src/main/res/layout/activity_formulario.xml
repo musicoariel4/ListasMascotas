@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Formulario">
+
+    <include android:id="@+id/miActionBar"
+        layout="@layout/actionbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/miActionBar"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin"
+
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_marginBottom="@dimen/top">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvNombre1"
+            style="@style/Widget.AppCompat.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/labelNombre"
+            android:textColorHint="#100F0F"
+            app:boxBackgroundColor="#B6B3B3">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tvNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#191818"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvtelef"
+            style="@style/Widget.AppCompat.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvNombre1"
+            android:hint="@string/labelTelefono"
+            android:textColorHint="#100F0F"
+            app:boxBackgroundColor="#B6B3B3">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tvTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#191818"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvcorreo"
+            style="@style/Widget.AppCompat.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvtelef"
+            android:hint="@string/labelEmail"
+            android:textColorHint="#100F0F"
+            app:boxBackgroundColor="#B6B3B3">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tvEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#191818"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvDescrip"
+            style="@style/Widget.AppCompat.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvcorreo"
+            android:hint="@string/labelDesc"
+            android:textColorHint="#100F0F"
+            app:boxBackgroundColor="#B6B3B3">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tvDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#191818"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/miboton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDescripcion"
+            android:onClick="siguiente"
+            android:text="Enviar"
+            android:theme="@style/MiBotonRaised">
+
+        </Button>
+
+
+    </LinearLayout>
+    
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>
