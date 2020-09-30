@@ -5,6 +5,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -13,13 +14,25 @@ import android.widget.DatePicker;
 
 import com.google.android.material.textfield.TextInputEditText;
 
+import java.util.Properties;
+
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+
 public class Formulario extends AppCompatActivity {
-    public static final int TEXT_REQUEST = 1; // código de solicitud
-    private TextInputEditText tvNombre;
-    private TextInputEditText tvEmail;
-    private TextInputEditText tvTelefono;
-    private TextInputEditText tvDescripcion;
-    private Button miboton1;
+
+
+    private TextInputEditText subject;
+    private TextInputEditText email;
+    private TextInputEditText message;
+    private Button button;
+
 
 
     @Override
@@ -27,36 +40,34 @@ public class Formulario extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario);
 
-        tvNombre = (TextInputEditText) findViewById(R.id.tvNombre);
-        tvEmail = (TextInputEditText) findViewById(R.id.tvEmail);
-        tvTelefono = (TextInputEditText) findViewById(R.id.tvTelefono);
-        tvDescripcion = (TextInputEditText) findViewById(R.id.tvDescripcion);
-        miboton1 = (Button) findViewById(R.id.miboton1);
+        subject = (TextInputEditText) findViewById(R.id.tvNombre);
+        email = (TextInputEditText) findViewById(R.id.tvEmail);
+        message= (TextInputEditText) findViewById(R.id.tvDescripcion);
+        button = (Button) findViewById(R.id.miboton1);
 
         Toolbar miActionBar =(Toolbar) findViewById(R.id.miActionBar);
         setSupportActionBar(miActionBar);
 
-        //   ActionBar ab = getSupportActionBar();
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                senEmail();
+            }
+        });
     }
-    public void siguiente(View view) {
 
-        String eNombre = tvNombre.getText().toString();
-        String eEmail = tvEmail.getText().toString();
-        String eTelefono = tvTelefono.getText().toString();
-        String eDescripcion = tvDescripcion.getText().toString();
-        Intent emailIntent =new Intent(Intent.ACTION_SEND);
-        emailIntent.setData(Uri.parse("mailto:"));
-        emailIntent.putExtra(Intent.EXTRA_EMAIL,eNombre);
-        emailIntent.putExtra(Intent.EXTRA_EMAIL,eTelefono);
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, eDescripcion);
-        emailIntent.putExtra(Intent.EXTRA_EMAIL,eEmail);
-        emailIntent.setType(("messge/rfc822"));
-        startActivity(Intent.createChooser(emailIntent,"Email"));
+    private void senEmail() {
+        String mEmail = email.getText().toString();
+        String mSubject = subject.getText().toString();
+        String mMessage = message.getText().toString();
 
+
+        JavaMailAPI javaMailAPI = new JavaMailAPI(this, mEmail, mSubject, mMessage);
+
+        javaMailAPI.execute();
     }
+
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event){
@@ -67,4 +78,6 @@ public class Formulario extends AppCompatActivity {
         }
         return super.onKeyDown(keyCode,event);
     }
+
+
 }
