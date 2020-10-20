@@ -51,11 +51,11 @@ public class SecondActivity extends AppCompatActivity {
     public void inicializarlistaMascotas(){
 
         contactos = new ArrayList<Mascota>();
-        contactos.add(new Mascota(R.drawable.akita,"akita","0"));
-        contactos.add(new Mascota(R.drawable.chih,"chin","0"));
-        contactos.add(new Mascota(R.drawable.gosque,"gosque","0"));
-        contactos.add(new Mascota(R.drawable.beagle,"beagle","0"));
-        contactos.add(new Mascota(R.drawable.pug,"pug","0"));
+        contactos.add(new Mascota(R.drawable.akita,"akita",1));
+        contactos.add(new Mascota(R.drawable.chih,"chin",2));
+        contactos.add(new Mascota(R.drawable.gosque,"gosque",5));
+        contactos.add(new Mascota(R.drawable.beagle,"beagle",4));
+        contactos.add(new Mascota(R.drawable.pug,"pug",3));
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

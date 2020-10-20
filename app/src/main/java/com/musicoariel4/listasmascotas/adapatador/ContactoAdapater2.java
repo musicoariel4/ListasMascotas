@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.musicoariel4.listasmascotas.Detalle_Mascota;
 import com.musicoariel4.listasmascotas.R;
+import com.musicoariel4.listasmascotas.pojo.ConstructorContactos;
 import com.musicoariel4.listasmascotas.pojo.Mascota;
 
 import java.util.ArrayList;
@@ -40,13 +41,16 @@ public class ContactoAdapater2 extends RecyclerView.Adapter<ContactoAdapater2.Co
         final Mascota contacto =contactos.get(position);
         holder.imgFoto.setImageResource(contacto.getFoto());
         holder.tvNombreCV.setText(contacto.getNombre());
-        holder.tvContador.setText(contacto.getContador());
+      //  holder.tvContador.setText(contacto.getLikes());
 
 
         holder.btnLike2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
+
                 Toast.makeText(activity,"like 2 "+ contacto.getNombre(),Toast.LENGTH_SHORT).show();
-                holder.tvContador.setText(contacto.getContador());
+                ConstructorContactos constructorContactos = new ConstructorContactos(activity);
+                constructorContactos.darLikeCotnacto(contacto);
+                holder.tvContador.setText(constructorContactos.obtenerLikesContacto(contacto) + " " + activity.getString(R.string.likes));
 
             }
         });
@@ -58,7 +62,7 @@ public class ContactoAdapater2 extends RecyclerView.Adapter<ContactoAdapater2.Co
                 Intent intent = new Intent(activity, Detalle_Mascota.class);
                 intent.putExtra("FotoContacto",contacto.getFoto());
                 intent.putExtra("nombreContacto",contacto.getNombre());
-                intent.putExtra("contadorContacto",contacto.getContador());
+                intent.putExtra("contadorContacto",contacto.getLikes());
 
                 activity.startActivity(intent);
             }
@@ -81,7 +85,6 @@ public class ContactoAdapater2 extends RecyclerView.Adapter<ContactoAdapater2.Co
         public ContactoViewHolder (View itemView){
             super(itemView);
             imgFoto = (ImageView) itemView.findViewById(R.id.imgFoto);
-
             tvNombreCV =(TextView) itemView.findViewById(R.id.tvNombreCV);
             tvContador = (TextView)itemView.findViewById(R.id.tvContador);
             btnLike2 = (ImageButton) itemView.findViewById(R.id.btnlike2);

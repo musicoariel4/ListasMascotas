@@ -31,7 +31,7 @@ public class Detalle_Mascota extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         int datoFoto =bundle.getInt("FotoContacto");
         String datoNombre=bundle.getString("nombreContacto");
-        String datoContador=bundle.getString("contadorContacto");
+        int datoContador=bundle.getInt("contadorContacto");
 
         foto= (ImageView)findViewById(R.id.imgFoto);
         tvNombre = (TextView)findViewById(R.id.tvNombreCV);
@@ -39,7 +39,7 @@ public class Detalle_Mascota extends AppCompatActivity {
 
         foto.setImageResource(datoFoto);
         tvNombre.setText(datoNombre);
-        tvContador.setText(datoContador);
+        //tvContador.setText(datoContador);
 
     }
     @Override

@@ -1,15 +1,18 @@
 package com.musicoariel4.listasmascotas.pojo;
 
 public class Mascota {
-
+    private int id;
     private int foto;
     private String  nombre;
-    private String contador;
+    private int likes = 0;
 
-    public Mascota(int foto, String nombre, String contador) {
+    public Mascota(int foto, String nombre, int likes) {
         this.foto = foto;
         this.nombre = nombre;
-        this.contador = contador;
+        this.likes = likes;
+    }
+
+    public Mascota() {
     }
 
     public int getFoto() {
@@ -28,11 +31,19 @@ public class Mascota {
         this.nombre = nombre;
     }
 
-    public String getContador() {
-        return contador;
+    public int getLikes() {
+        return likes;
     }
 
-    public void setContador(String contador) {
-        this.contador = contador;
+    public void setLikes(int likes) {
+        this.likes = likes;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

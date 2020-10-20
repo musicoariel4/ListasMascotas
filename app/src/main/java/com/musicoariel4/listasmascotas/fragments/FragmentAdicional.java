@@ -1,5 +1,6 @@
 package com.musicoariel4.listasmascotas.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,23 +14,29 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.musicoariel4.listasmascotas.R;
+import com.musicoariel4.listasmascotas.adapatador.ContactoAdapater;
 import com.musicoariel4.listasmascotas.adapatador.ContactoAdapater2;
+import com.musicoariel4.listasmascotas.pojo.ConstructorContactos;
 import com.musicoariel4.listasmascotas.pojo.Mascota;
+import com.musicoariel4.listasmascotas.presentador.IRecyclerViewFragmentPresenter;
+import com.musicoariel4.listasmascotas.presentador.IRecyclerViewFragmentPresenter2;
+import com.musicoariel4.listasmascotas.presentador.RecyclerViewFragmentPresenter;
+import com.musicoariel4.listasmascotas.presentador.RecyclerViewFragmentPresenter2;
 
 import java.util.ArrayList;
 
 
-public class FragmentAdicional extends Fragment {
+public class FragmentAdicional extends Fragment implements IFragmentAdicionalView{
 
     ArrayList<Mascota> contactos;
     private RecyclerView listaMascotas;
+    private IRecyclerViewFragmentPresenter2 presenter2;
+    private Context context;
+    private ConstructorContactos constructorContactos;
 
     public FragmentAdicional() {
         // Required empty public constructor
     }
-
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,27 +46,42 @@ public class FragmentAdicional extends Fragment {
 
         listaMascotas=(RecyclerView)v.findViewById(R.id.rvMascotas2);
 
-       GridLayoutManager llm = new GridLayoutManager(getActivity(),2);
-
-        listaMascotas.setLayoutManager(llm);
-        inicializarlistaMascotas();
-        inicilizarAdaptador();
+        presenter2 = new RecyclerViewFragmentPresenter2(this,getContext());
         return v;
     }
-    public void inicilizarAdaptador(){
+   /* public void inicilizarAdaptador(){
         ContactoAdapater2 adaptador = new ContactoAdapater2(contactos, (AppCompatActivity) getActivity());
         listaMascotas.setAdapter(adaptador);
 
-    }
+    }*/
 
-    public void inicializarlistaMascotas(){
+  /*  public void inicializarlistaMascotas(){
 
         contactos = new ArrayList<Mascota>();
-        contactos.add(new Mascota(R.drawable.akita,"akita","5"));
-        contactos.add(new Mascota(R.drawable.chih,"chin","2"));
-        contactos.add(new Mascota(R.drawable.gosque,"gosque","2"));
-        contactos.add(new Mascota(R.drawable.beagle,"beagle","3"));
-        contactos.add(new Mascota(R.drawable.pug,"pug","1"));
+        contactos.add(new Mascota(R.drawable.akita,"akita",5));
+        contactos.add(new Mascota(R.drawable.chih,"chin",2));
+        contactos.add(new Mascota(R.drawable.gosque,"gosque",2));
+        contactos.add(new Mascota(R.drawable.beagle,"beagle",2));
+        contactos.add(new Mascota(R.drawable.pug,"pug",2));
+    }*/
+
+    @Override
+    public void generarLinearLayoutgrill() {
+
+        GridLayoutManager llm = new GridLayoutManager(getActivity(),2);
+
+        listaMascotas.setLayoutManager(llm);
+
     }
 
+    @Override
+    public ContactoAdapater2 crearApaptador(ArrayList<Mascota> contactos) {
+        ContactoAdapater2 adaptador = new ContactoAdapater2(contactos, (AppCompatActivity) getActivity());
+        return adaptador;
+    }
+
+    @Override
+    public void inicializadorAdaptador(ContactoAdapater2 adaptador) {
+        listaMascotas.setAdapter(adaptador);
+    }
 }
