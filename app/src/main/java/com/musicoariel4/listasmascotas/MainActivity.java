@@ -85,6 +85,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intBio);
                 return true;
 
+            case R.id.action_settings3:
+                Intent cuentaUsu =new  Intent(this,CuentaUsuario.class);
+                startActivity(cuentaUsu);
+                return true;
 
 
             default:

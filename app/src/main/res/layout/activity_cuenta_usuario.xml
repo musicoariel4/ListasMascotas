@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".CuentaUsuario">
 
     <include android:id="@+id/miActionBar"
         layout="@layout/actionbar"/>
@@ -27,7 +28,7 @@
             style="@style/Widget.AppCompat.TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Escribe tu usuario"
+            android:hint="Cuenta de Usuario"
             android:textColorHint="#100F0F"
             app:boxBackgroundColor="#B6B3B3">
 

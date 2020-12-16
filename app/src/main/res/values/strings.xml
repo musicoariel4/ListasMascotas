@@ -6,6 +6,7 @@
     <string name="Email">Email de persona</string>
 
     <string name="action_settings">Acerca De</string>
+    <string name="action_settings3">Cuenta Usuario</string>
     <string name="action_order_message">You selected Order.</string>
     <string name="action_status_message">You selected Status.</string>
     <string name="action_favorites_message">You selected Favorites.</string>
