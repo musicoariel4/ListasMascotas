@@ -51,11 +51,11 @@ public class BaseDatos extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor registros = db.rawQuery(query, null);
 
-        while (registros.moveToNext()){
-            Mascota contactoActual = new Mascota();
-            contactoActual.setId(registros.getInt(0));
-            contactoActual.setNombre(registros.getString(1));
-            contactoActual.setFoto(registros.getInt(2));
+    while (registros.moveToNext()){
+          Mascota contactoActual = new Mascota();
+            contactoActual.setId(String.valueOf(registros.getInt(0)));
+            contactoActual.setNombreCompleto(registros.getString(1));
+            contactoActual.setUrlFoto(String.valueOf(registros.getInt(2)));
 
             String queryLikes = "SELECT COUNT("+ConstantesBaseDatos.TABLE_LIKES_CONTACT_NUMERO_LIKES+") as likes " +
                     " FROM " + ConstantesBaseDatos.TABLE_LIKES_CONTACT +
@@ -76,7 +76,7 @@ public class BaseDatos extends SQLiteOpenHelper {
 
         return contactos;
     }
-
+/*
     public void insertarContacto(ContentValues contentValues){
         SQLiteDatabase db = this.getWritableDatabase();
         db.insert(ConstantesBaseDatos.TABLE_CONTACTS,null, contentValues);
@@ -107,6 +107,6 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.close();
 
         return likes;
-    }
+    }*/
 }
 

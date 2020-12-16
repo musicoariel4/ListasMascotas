@@ -1,0 +1,27 @@
+
+Identificador de la app de Instagram :423508021986360
+Clave secreta de la app de Instagram: 7054fc9ec4fb3889f34ae7231cb335b0
+Nombre para mostrar en Instagram : ListaMascotas
+Uri : https://github.com/musicoariel4
+
+https://graph.facebook.com/v9.0/oauth/access_token?  
+    grant_type=fb_exchange_token&          
+    client_id=1863721523765525&
+    client_secret=07723360a52ec6f24f5b9e507d1b371a&
+    fb_exchange_token=EAAafC3tiYRUBAATBqR4TOqIK0v7NPhf6Vi9t60FTfJmnsZCuZCL0FZA0FKVW1RiS9LP20yNDo6LH3kHu3WeVO200uRA1Y60AHHjy6Wm0clUFynvTrptCN9EcjMMBYsLRzMTIEd4EQ1iBfDmlM0tdLZCK2MqcW6rnMAHhHh3jNktWOxJyd4h5QNJRmzbydhBurZApGnZB39DgZDZD
+    
+    {"access_token":"EAAafC3tiYRUBAHz8wvd2irT9Y3pKRU7tFM5fiPcFZALH1mwGWTqgiEItKdyHZAduh3ccbyIcAYkz7k7QpTObZBZBhtZCJr7taJMeouH4GLVWj0mAU6OAsyVzVwZCEnzCddjcWnr24MQMV817qbmzDHvZBs9IUeNHK8ZD","token_type":"bearer","expires_in":5183999}
+    
+    
+    https://graph.facebook.com/v9.0/{ig-media-id} ?fields={fields} &access_token={access-token}
+    
+    https://graph.facebook.com/v9.0/17841402381545326/media?fields=id,media_type,media_url,like_count,owner,timestamp&access_token=EAAafC3tiYRUBAHz8wvd2irT9Y3pKRU7tFM5fiPcFZALH1mwGWTqgiEItKdyHZAduh3ccbyIcAYkz7k7QpTObZBZBhtZCJr7taJMeouH4GLVWj0mAU6OAsyVzVwZCEnzCddjcWnr24MQMV817qbmzDHvZBs9IUeNHK8ZD"
+    
+    {
+   "biography": "Hi",
+   "id": "17841402381545326",
+   "username": "ariel4868"
+}
+
+ https://graph.facebook.com/v9.0/17841402381545326?fields=biography%2Cid%2Cusername%2Cwebsite&access_token=EAAafC3tiYRUBAHz8wvd2irT9Y3pKRU7tFM5fiPcFZALH1mwGWTqgiEItKdyHZAduh3ccbyIcAYkz7k7QpTObZBZBhtZCJr7taJMeouH4GLVWj0mAU6OAsyVzVwZCEnzCddjcWnr24MQMV817qbmzDHvZBs9IUeNHK8ZD"
+   

@@ -8,8 +8,6 @@ import java.util.ArrayList;
 
 public interface IFragmentAdicionalView {
 
-    public void generarLinearLayoutgrill(); //
-    public ContactoAdapater2 crearApaptador(ArrayList<Mascota> contactos);
-    public  void  inicializadorAdaptador(ContactoAdapater2 adaptador);
+
 
 }

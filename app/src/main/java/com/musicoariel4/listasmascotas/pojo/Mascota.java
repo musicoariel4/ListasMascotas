@@ -1,34 +1,42 @@
 package com.musicoariel4.listasmascotas.pojo;
 
 public class Mascota {
-    private int id;
-    private int foto;
-    private String  nombre;
-    private int likes = 0;
+    private String id;
+    private String  nombreCompleto;
+    private String urlFoto;
+    private  int likes = 0;
 
-    public Mascota(int foto, String nombre, int likes) {
-        this.foto = foto;
-        this.nombre = nombre;
+    public Mascota(String urlFoto, String nombreCompleto,int likes ) {
+        this.nombreCompleto = nombreCompleto;
+        this.urlFoto=urlFoto;
         this.likes = likes;
     }
 
     public Mascota() {
     }
 
-    public int getFoto() {
-        return foto;
+    public String getId() {
+        return id;
     }
 
-    public void setFoto(int foto) {
-        this.foto = foto;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreCompleto() {
+        return nombreCompleto;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreCompleto(String nombreCompleto) {
+        this.nombreCompleto = nombreCompleto;
+    }
+
+    public String getUrlFoto() {
+        return urlFoto;
+    }
+
+    public void setUrlFoto(String urlFoto) {
+        this.urlFoto = urlFoto;
     }
 
     public int getLikes() {
@@ -37,13 +45,5 @@ public class Mascota {
 
     public void setLikes(int likes) {
         this.likes = likes;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 }

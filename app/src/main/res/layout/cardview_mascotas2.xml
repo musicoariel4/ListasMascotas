@@ -37,7 +37,7 @@
                 />
 
             <TextView
-                android:id="@+id/tvContador"
+                android:id="@+id/tvLikes"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="0"

@@ -18,15 +18,15 @@ public class ConstructorContactos{
             this.context = context;
         }
 
-        public ArrayList<Mascota> obtenerDatos() {
+   /*    public ArrayList<Mascota> obtenerDatos() {
             BaseDatos db = new BaseDatos(context);
             insertarTresContactos(db);
             return  db.obtenerTodosLosContactos();
-        }
+        }*/
 
+/*
 
-
-        public void insertarTresContactos(BaseDatos db){
+       public void insertarTresContactos(BaseDatos db){
             ContentValues contentValues = new ContentValues();
             contentValues.put(ConstantesBaseDatos.TABLE_CONTACTS_NOMBRE, "akita");
             contentValues.put(ConstantesBaseDatos.TABLE_CONTACTS_FOTO, R.drawable.akita);
@@ -66,7 +66,7 @@ public class ConstructorContactos{
         public int obtenerLikesContacto(Mascota contacto){
             BaseDatos db = new BaseDatos(context);
             return db.obtenerLikesContacto(contacto);
-        }
+        }*/
 
 
 }

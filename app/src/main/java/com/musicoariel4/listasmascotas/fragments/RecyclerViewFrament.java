@@ -26,8 +26,7 @@ public class RecyclerViewFrament extends Fragment  implements  IRecyclerViewFrag
     ArrayList<Mascota> contactos;
     private RecyclerView listaMascotas;
     private IRecyclerViewFragmentPresenter presenter;
-    private Context context;
-    private ConstructorContactos constructorContactos;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -38,29 +37,21 @@ public class RecyclerViewFrament extends Fragment  implements  IRecyclerViewFrag
         presenter = new RecyclerViewFragmentPresenter(this,getContext());
         return v;
     }
-   /* public void inicilizarAdaptador(){
-        ContactoAdapater adaptador = new ContactoAdapater(contactos, (AppCompatActivity) getActivity());
-        listaMascotas.setAdapter(adaptador);
 
-    }
 
-  public void inicializarlistaMascotas(){
-
-        contactos = new ArrayList<Mascota>();
-        contactos.add(new Mascota(R.drawable.akita,"akita","0"));
-        contactos.add(new Mascota(R.drawable.chih,"chin","0"));
-        contactos.add(new Mascota(R.drawable.gosque,"gosque","0"));
-        contactos.add(new Mascota(R.drawable.beagle,"beagle","0"));
-        contactos.add(new Mascota(R.drawable.pug,"pug","0"));
-    }*/
 
     @Override
     public void generarLinearLayoutVertical() {
-        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
-        //  GridLayoutManager llm = new GridLayoutManager(this,2);
+        // LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        // llm.setOrientation(LinearLayoutManager.VERTICAL);
+        GridLayoutManager llm = new GridLayoutManager(getActivity(),2);
         listaMascotas.setLayoutManager(llm);
+    }
 
+    @Override
+    public void generarGridLayaout() {
+        GridLayoutManager llm = new GridLayoutManager(getActivity(),2);
+        listaMascotas.setLayoutManager(llm);
     }
 
     @Override
