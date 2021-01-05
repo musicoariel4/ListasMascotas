@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "2064975631",
+    "firebase_url": "https://listamascotasariel-default-rtdb.firebaseio.com",
+    "project_id": "listamascotasariel",
+    "storage_bucket": "listamascotasariel.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2064975631:android:d71a9a148339bdd3d9e07a",
+        "android_client_info": {
+          "package_name": "com.musicoariel4.lanzanotificacion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "2064975631-d3ls8bqgipoaqo119b9eglt24p015kv4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.musicoariel4.lanzanotificacion",
+            "certificate_hash": "34bb429cc30d9c40c85ffa794137e8c8e5ad9483"
+          }
+        },
+        {
+          "client_id": "107128325354729055765",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0Wl2nBcw5HXYdsiK1KjrMi_daPC5ws80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107128325354729055765",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2064975631:android:49a560e2c04e156fd9e07a",
+        "android_client_info": {
+          "package_name": "com.musicoariel4.listasmascotas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "2064975631-mf9887neusej7pd0sisrfda27povl3e0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.musicoariel4.listasmascotas",
+            "certificate_hash": "c0d1028dfe24bcbf4259eaed82dd10c6685cb2ab"
+          }
+        },
+        {
+          "client_id": "107128325354729055765",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0Wl2nBcw5HXYdsiK1KjrMi_daPC5ws80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107128325354729055765",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

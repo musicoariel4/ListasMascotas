@@ -24,5 +24,13 @@ public class RestApiAdapter {
         gsonBuilder.registerTypeAdapter(ContactoResponse.class, new ContactoDeserializador());
         return gsonBuilder.create();
     }
+    public IEndpointsApi  establecerConexionRestAPI(){
+        Retrofit retrofit =  new Retrofit.Builder()
+                .baseUrl(ConstantesRestApi.ROOT_URL_SERVE)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        return  retrofit.create(IEndpointsApi.class);
+
+    }
 
 }

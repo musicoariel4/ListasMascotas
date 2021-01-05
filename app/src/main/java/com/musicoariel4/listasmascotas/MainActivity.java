@@ -89,6 +89,11 @@ public class MainActivity extends AppCompatActivity {
                 Intent cuentaUsu =new  Intent(this,CuentaUsuario.class);
                 startActivity(cuentaUsu);
                 return true;
+            case R.id.action_settings4:
+
+                Intent noti =new  Intent(this,Notificaciones.class);
+                startActivity(noti);
+                return true;
 
 
             default:

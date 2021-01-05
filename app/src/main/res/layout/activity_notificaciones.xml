@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Formulario">
+    tools:context=".Notificaciones">
 
     <include android:id="@+id/miActionBar"
         layout="@layout/actionbar"/>
@@ -24,7 +24,7 @@
         tools:layout_marginBottom="@dimen/top">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tvNombre1"
+            android:id="@+id/tvid_dispositivo"
             style="@style/Widget.AppCompat.TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
             app:boxBackgroundColor="#B6B3B3">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tvNombre"
+                android:id="@+id/tvid_dispositivo1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#191818"
@@ -44,17 +44,17 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tvcorreo"
+            android:id="@+id/tvid_usuario_instagram"
             style="@style/Widget.AppCompat.TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tvNombre1"
+            android:layout_below="@+id/tvid_dispositivo"
             android:hint="@string/labelEmail"
             android:textColorHint="#100F0F"
             app:boxBackgroundColor="#B6B3B3">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tvEmail"
+                android:id="@+id/tvid_usuario_instagram1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#191818"
@@ -63,31 +63,14 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tvDescrip"
-            style="@style/Widget.AppCompat.TextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tvcorreo"
-            android:hint="@string/labelDesc"
-            android:textColorHint="#100F0F"
-            app:boxBackgroundColor="#B6B3B3">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tvDescripcion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#191818"
-                android:textSize="14sp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/miboton1"
+            android:id="@+id/mibotonnot"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tvDescripcion"
-            android:onClick="siguiente"
+            android:layout_below="@id/tvid_usuario_instagram"
+            android:onClick="lanzarNotificacion"
             android:text="Enviar"
             android:theme="@style/MiBotonRaised">
 
