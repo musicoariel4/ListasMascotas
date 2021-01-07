@@ -24,4 +24,6 @@
     <string name="action_settings4">Recibir Notificaciones</string>
     <string name="lanzar_notificacion">Lanzar Notificacion</string>
     <string name="msg_token_fmt" translatable="false">EL ID es Token: %s</string>
+    <string name="usuarioInstagram">Usuario Instagram</string>
+    <string name="id_dispositivo">Id dispositivo(no hay necesidad)</string>
 </resources>
