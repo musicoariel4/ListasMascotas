@@ -71,10 +71,10 @@ public class Notificaciones extends AppCompatActivity {
                 // Toast toast2 = Toast.makeText(context2, text2, duration);
                 //  toast1.show();
                 //  toast2.show();
-                Log.d("ID_FIREBASE", usuarioResponse.getId());
-                Log.d("ID_DISPOSIVO", usuarioResponse.getId_dispositivo());
-                Log.d("ID_INSTAGRAM", usuarioResponse.getId_usuario_instagram());
-
+             //   Log.d("ID_FIREBASE", usuarioResponse.getId());
+             //   Log.d("ID_DISPOSIVO", usuarioResponse.getId_dispositivo());
+             //   Log.d("ID_INSTAGRAM", usuarioResponse.getId_usuario_instagram());
+//
 
             }
 
